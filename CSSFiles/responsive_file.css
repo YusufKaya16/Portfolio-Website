@@ -1,0 +1,86 @@
+@import "app.css";
+
+@media screen and (max-width: 880px){
+
+    .navbar-brand #brandIcon {
+        color: var(--dark-color);
+    }
+
+    #home{
+        top: 90px;
+        background: #fff;
+    }
+
+    #home .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home .content .information{
+        width: 70%;
+        text-align: center;
+    }
+
+    #home .content .information .titles *{
+        font-size: 2.5rem;
+    }
+
+    #home .content .social-media-links{
+        justify-content: center;
+    }
+
+    #about{
+        margin-block: 3.75rem;
+    }
+    #about .about-text{
+        width: 100%;
+    }
+
+    #contact .col-2{
+        width: 50%;
+        order: -1;
+    }
+    #contact .col-8{
+        width: 100%;
+    }
+    #contact .col-8 .col-3{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+
+
+    #home .content .circle-container{
+        width: 350px;
+        height: 350px;
+    }
+    #home .content .information{
+        width: 100%;
+        text-align: center;
+    }
+
+    #about .about-text{
+        width: 100%;
+    }
+    
+    #contact .col-2{
+        width: 100%;
+        order: -1;
+    }
+
+    #contact .col-2 h3{
+        margin-top: 30px;
+    }
+
+    #contact .col-8{
+        width: 100%;
+    }
+    #contact .col-8 .col-3{
+        width: 100%;
+    }
+
+    
+    
+}

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+
+}
+
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--light-color);
+    width: 100vw;
+    height: 1000px;
+    overflow-x: hidden;       /* x ekseni boyunca scroll bar'ı gizler */
+}
+
+:root{
+
+    --gray-color: #696969;
+    --light-color: #fff;
+    --dark-color: #000;
+}
+
+
