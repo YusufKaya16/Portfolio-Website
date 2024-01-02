@@ -1,0 +1,67 @@
+@import "global.css";
+
+#about {
+    .container {
+        max-width: 600px;
+        border-top: 3px solid #696969;
+
+        .information {
+            max-width: 100%;
+            font-size: 1.3rem;
+
+            p {
+                text-align: justify;
+            }
+
+            .moreBtn {
+                a {
+                    padding: 10px 30px;
+                    border-radius: 50px;
+                    border: 2px solid black;
+                    text-decoration: none;
+                    color: var(--dark-color);
+                    transition: padding .2s ease-in-out;
+                    position: relative;
+
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 0%;
+                        border: 1px solid;
+                        display: block;
+                        left: 20%;
+                        visibility: hidden;
+                        transition: width .2s ease-in-out;
+                    }
+
+                    &:hover::after {
+                        width: 60%;
+                        visibility: visible;
+                    }
+
+                    &:hover {
+                        padding: 20px 40px;
+
+                    }
+                }
+            }
+
+            @media screen and (max-width: 990px) {
+                font-size: 1.5em;
+            }
+
+            @media screen and (max-width: 765px) {
+                margin-inline: 20px;
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            max-width: 80%;
+        }
+
+        @media screen and (max-width: 765px) {
+            max-width: 90%;
+        }
+    }
+}

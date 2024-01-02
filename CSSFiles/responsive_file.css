@@ -1,31 +1,32 @@
 @import "app.css";
+@import "__homeSection.css";
 
 @media screen and (max-width: 880px){
 
-    .navbar-brand #brandIcon {
-        color: var(--dark-color);
-    }
+    /* .navbar-brand #brandIcon {
+        color: #000;
+    } */
 
     #home{
-        top: 90px;
-        background: #fff;
+        height: calc(100vh + 100px);
+        background: var(--home-right-background-color);
     }
 
-    #home .content{
+    #home #content{
         flex-direction: column;
         align-items: center;
     }
 
-    #home .content .information{
+    #home #content .information{
         width: 70%;
         text-align: center;
     }
 
-    #home .content .information .titles *{
+    #home #content .information .titles *{
         font-size: 2.5rem;
     }
 
-    #home .content .social-media-links{
+    #home #content .social-main-container{
         justify-content: center;
     }
 
@@ -52,11 +53,11 @@
 @media screen and (max-width: 550px){
 
 
-    #home .content .circle-container{
+    #home #content .circle-container{
         width: 350px;
         height: 350px;
     }
-    #home .content .information{
+    #home #content .information{
         width: 100%;
         text-align: center;
     }

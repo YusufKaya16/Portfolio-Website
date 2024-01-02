@@ -1,0 +1,92 @@
+body {
+
+
+    #portfolio {
+
+        .card {
+            cursor: pointer;
+            transition: box-shadow .2s ease-in;
+
+            &:hover {
+                box-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+            }
+
+            .figure-container {
+                border-radius: inherit;
+            }
+
+            img {
+                width: 100%;
+                aspect-ratio: 1;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                min-height: 200px;
+
+                .card-title {
+                    padding-inline: 10px;
+                    font-weight: 600;
+                    text-wrap: nowrap;
+                }
+
+                .card-info {
+                    text-align: justify;
+                    padding-inline: 10px;
+                    flex-basis: 50%;
+                }
+
+                .sitebtn {
+                    margin-block: 20px 20px;
+
+                    a {
+                        background: rgba($color: #000000, $alpha: 0.3);
+                        padding: 10px 30px;
+                        border-radius: .5em;
+                        text-decoration: none;
+                        color: var(--light-color);
+
+                        &:hover {
+                            background: rgba($color: #000000, $alpha: 0.8);
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
+        @media screen and (max-width: 990px) {
+            .row {
+                .card {
+                    width: 80%;
+                    flex-direction: row;
+
+                    * {
+                        flex-basis: 50%;
+                    }
+
+                    .figure-container {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 765px) {
+            .row {
+                .card {
+                    width: 100%;
+
+                    .card-body {
+                        padding: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

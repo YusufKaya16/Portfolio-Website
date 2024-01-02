@@ -1,0 +1,65 @@
+body #portfolio .card {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in;
+}
+body #portfolio .card:hover {
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+}
+body #portfolio .card .figure-container {
+  border-radius: inherit;
+}
+body #portfolio .card img {
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
+}
+body #portfolio .card .card-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+body #portfolio .card .card-body .card-title {
+  padding-inline: 10px;
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+body #portfolio .card .card-body .card-info {
+  text-align: justify;
+  padding-inline: 10px;
+  flex-basis: 50%;
+}
+body #portfolio .card .card-body .sitebtn {
+  margin-block: 20px 20px;
+}
+body #portfolio .card .card-body .sitebtn a {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 30px;
+  border-radius: 0.5em;
+  text-decoration: none;
+  color: var(--light-color);
+}
+body #portfolio .card .card-body .sitebtn a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 990px) {
+  body #portfolio .row .card {
+    width: 80%;
+    flex-direction: row;
+  }
+  body #portfolio .row .card * {
+    flex-basis: 50%;
+  }
+  body #portfolio .row .card .figure-container {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 765px) {
+  body #portfolio .row .card {
+    width: 100%;
+  }
+  body #portfolio .row .card .card-body {
+    padding: 1px;
+  }
+}/*# sourceMappingURL=portfolioSection.css.map */

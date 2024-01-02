@@ -1,17 +1,20 @@
+@import "__navbar.css";
+@import "__homeSection.css";
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* border: 2px solid black; */
-
 }
-
 
 body{
     font-family: "Roboto", sans-serif;
     background-color: var(--light-color);
     width: 100vw;
-    height: 1000px;
+    min-height: 2000px;
     overflow-x: hidden;       /* x ekseni boyunca scroll bar'ı gizler */
 }
 
@@ -20,6 +23,24 @@ body{
     --gray-color: #696969;
     --light-color: #fff;
     --dark-color: #000;
+    --link-after-color: #FF0000;
+    --navbar-toggler-color: black;
+    --text-animation-color: #696969;
 }
 
+.navbar-toggleStyle{
+    --navbar-brand-color: #000;
+    --navbar-link-color: #fff;
+}
+
+.home-toggleStyle{
+    --social-links-color: #fff;
+    --social-links-outline-color:  #f73505;
+    --social-links-background: #f73505;
+    --information-developer-color: #f73505;
+    --information-titles-color: #fff;
+    --home-right-background-color: #000;
+    --light-color: #000;
+    --text-animation-color: #f73505;
+}
 
