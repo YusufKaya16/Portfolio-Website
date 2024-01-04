@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="CSSFiles/app.css">
     <link rel="stylesheet" href="CSSFiles/__navbar.css">
     <link rel="stylesheet" href="CSSFiles/__homeSection.css">
-    <link rel="stylesheet" href="CSSFiles/aboutSection.css">
+    <link rel="stylesheet" href="CSSFiles/aboutSection/aboutSection.css">
     <link rel="stylesheet" href="CSSFiles/portfolioSection/portfolioSection.css">
 
 
@@ -106,7 +106,7 @@
         </section>
 
         <!-- About Section -->
-        <section class="container-fluid" id="about">
+        <section class="container-fluid m-2" id="about">
             <div class="container my-5 rounded-3 p-4">
                 <article class="information">
                     <p class="px-3">
@@ -121,12 +121,19 @@
             </div>
         </section>
 
-        <!-- komple section collaspe olmalı sanırım -->
-
         <!-- Portfolio Section -->
-        <section class="container-fluid my-5" id="portfolio">
-            <h1 class="portfolio-title text-center mb-4">Portföyüm</h1>
-            <div class="container p-0 overflow-hidden">
+        <section class="container-fluid p-0" id="portfolio">
+            <h1 class="portfolio-title text-center mb-2">Portföyüm</h1>
+            <div class="btn-text">
+                <button class="btn btn-primary" id="collapseBtn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <span class="more-text">Daha Fazla</span>
+            </div>
+
+            <div class="container overflow-hidden py-2">
                 <div class="row justify-content-center gap-2 mb-3" id="row-1">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
@@ -179,12 +186,8 @@
                     </div>
                 </div>
 
-                <div class="container text-center">
-                    <button class="btn btn-primary w-25" id="collapseBtn">Daha fazla</button>
-                </div>
-
                 <!-- row 2 -->
-                <div class="row justify-content-center gap-1" id="mycollapse">
+                <div class="row justify-content-center gap-1 mb-5" id="mycollapse">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
                             <figure class="container p-0 figure-container">
@@ -240,9 +243,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
     </main>
 
