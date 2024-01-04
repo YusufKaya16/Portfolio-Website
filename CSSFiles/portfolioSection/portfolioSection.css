@@ -1,3 +1,6 @@
+body #portfolio {
+  min-height: 100vh;
+}
 body #portfolio .card {
   cursor: pointer;
   transition: box-shadow 0.2s ease-in;
@@ -18,7 +21,6 @@ body #portfolio .card img {
 body #portfolio .card .card-body {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
 }
 body #portfolio .card .card-body .card-title {
   padding-inline: 10px;
@@ -42,6 +44,10 @@ body #portfolio .card .card-body .sitebtn a {
 }
 body #portfolio .card .card-body .sitebtn a:hover {
   background: rgba(0, 0, 0, 0.8);
+}
+body #portfolio #mycollapse {
+  height: 0;
+  transition: height 400ms;
 }
 @media screen and (max-width: 990px) {
   body #portfolio .row .card {

@@ -1,7 +1,7 @@
 body {
 
-
     #portfolio {
+        min-height: 100vh;
 
         .card {
             cursor: pointer;
@@ -25,7 +25,6 @@ body {
             .card-body {
                 display: flex;
                 flex-direction: column;
-                min-height: 200px;
 
                 .card-title {
                     padding-inline: 10px;
@@ -54,9 +53,12 @@ body {
                         }
                     }
                 }
-
             }
+        }
 
+        #mycollapse {
+            height: 0;
+            transition: height 400ms;
 
         }
 
@@ -89,4 +91,5 @@ body {
             }
         }
     }
+
 }

@@ -121,12 +121,13 @@
             </div>
         </section>
 
+        <!-- komple section collaspe olmalı sanırım -->
+
         <!-- Portfolio Section -->
         <section class="container-fluid my-5" id="portfolio">
             <h1 class="portfolio-title text-center mb-4">Portföyüm</h1>
-            <div class="container">
-                <div class="row justify-content-center mb-3 gap-1">
-
+            <div class="container p-0 overflow-hidden">
+                <div class="row justify-content-center gap-2 mb-3" id="row-1">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
                             <figure class="container p-0 figure-container">
@@ -177,18 +178,23 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="container text-center">
+                    <button class="btn btn-primary w-25" id="collapseBtn">Daha fazla</button>
+                </div>
+
                 <!-- row 2 -->
-                <div class="row justify-content-center gap-1 mb-3">
+                <div class="row justify-content-center gap-1" id="mycollapse">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
                             <figure class="container p-0 figure-container">
                                 <img src="CSSFiles/images/pro4.png" class="img-fluid" alt="image-1">
                             </figure>
                             <div class="card-body">
-                                <h3 class="card-title">Card 1</h3>
-                                <p class="card-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-                                    dolores vel provident
-                                    dicta neque consectetur eveniet dolorem hic beatae distinctio?
+                                <h3 class="card-title">Ürün Kartı</h3>
+                                <p class="card-info">
+                                    HTML ve CSS kullanarak gerçekleştirilen, responsive tasarım mantığınıda içerisinde
+                                    barındıran ürün kartı projesi.
                                 </p>
                                 <div class="sitebtn text-end px-4">
                                     <a href="https://product-preview-card-with-sass.netlify.app"
@@ -203,10 +209,10 @@
                                 <img src="CSSFiles/images/pro5.png" class="img-fluid" alt="image-1">
                             </figure>
                             <div class="card-body">
-                                <h3 class="card-title">Card 2</h3>
-                                <p class="card-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-                                    dolores vel provident
-                                    dicta neque consectetur eveniet dolorem hic beatae distinctio?
+                                <h3 class="card-title">Özet Bileşeni Kartı</h3>
+                                <p class="card-info">
+                                    HTML ve CSS kullanarak gerçekleştirilen, responsive tasarım mantığınıda içerisinde
+                                    barındıran ürün kartı projesi.
                                 </p>
                                 <div class="sitebtn text-end px-4">
                                     <a href="https://results-summarycomponent.netlify.app" target="_blank">Sonuç</a>
@@ -220,10 +226,10 @@
                                 <img src="CSSFiles/images/pro6.png" class="img-fluid" alt="image-1">
                             </figure>
                             <div class="card-body">
-                                <h3 class="card-title">Card 3</h3>
-                                <p class="card-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-                                    dolores vel provident
-                                    dicta neque consectetur eveniet dolorem hic beatae distinctio?
+                                <h3 class="card-title">Sık Sorulan Sorular</h3>
+                                <p class="card-info">
+                                    HTML, CSS ve JavaSvript kullanarak gerçekleştirilen, sık sorulan sorular bölüm
+                                    örneği.
                                 </p>
                                 <div class="sitebtn text-end px-4">
                                     <a href="https://faqsaccordion.netlify.app" target="_blank">Sonuç</a>
@@ -234,6 +240,10 @@
                 </div>
             </div>
         </section>
+
+
+
+
     </main>
 
 

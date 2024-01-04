@@ -33,3 +33,21 @@ const textAnimation = function () {
 
 textAnimation();
 setInterval(textAnimation, 18000);
+
+const button = document.querySelector('#collapseBtn');
+const collapse = document.querySelector('#mycollapse');
+const row1 = document.querySelector('#row-1');
+
+button.addEventListener('click', () =>{
+    if(collapse.clientHeight){
+        collapse.style.height = 0;
+    }
+    else{
+        collapse.style.height = (row1.clientHeight) +'px';
+        collapse.style.visibility = 'visible';
+
+    }
+})
+
+
+
