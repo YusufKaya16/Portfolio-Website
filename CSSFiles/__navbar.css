@@ -43,6 +43,7 @@
 
 .navbar-nav .link{
     position: relative;
+    padding-inline: 20px !important;
 }
 
 .link::after {

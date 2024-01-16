@@ -37,27 +37,23 @@ setInterval(textAnimation, 18000);
 const button = document.querySelector('#collapseBtn');
 const collapse = document.querySelector('#mycollapse');
 const row1 = document.querySelector('#row-1');
-const btnText = document.querySelector('.btn-text');
-const buttonText = btnText.querySelector('.more-text');
 
-button.addEventListener('click', () =>{
-    if(collapse.clientHeight){
-        collapse.style.height = 0;
-        collapse.style.opacity = '0';
-        collapse.style.visibility = 'hidden';
-        buttonText.textContent = 'Daha Fazla';
-        btnText.classList.remove('btnTextChangeClass');
+button.addEventListener('click', (event) => {
+    console.log(event.target.textContent);
 
-    }
-    else{
-        collapse.style.height = (row1.clientHeight) +'px';
-        collapse.style.opacity = '1';
-        collapse.style.visibility = 'visible';
-        buttonText.textContent = 'Daha Az';
-        btnText.classList.add('btnTextChangeClass');
-
-    }
+    // if(collapse.clientHeight){
+    //     collapse.style.height = '0';
+    //     collapse.style.opacity = '0';
+    //     collapse.style.visibility = 'hidden';
+    // }
+    // else {
+    //     collapse.style.height = (row1.clientHeight) + 'px';
+    //     collapse.style.opacity = '1';
+    //     collapse.style.visibility = 'visible';
+    // }
+    
 })
+
 
 
 

@@ -18,8 +18,7 @@
 
 
     <!-- my css files -->
-    <link rel="stylesheet" href="CSSFiles/global.css">
-    <link rel="stylesheet" href="CSSFiles/app.css">
+    <!-- <link rel="stylesheet" href="CSSFiles/global.css"> -->
     <link rel="stylesheet" href="CSSFiles/__navbar.css">
     <link rel="stylesheet" href="CSSFiles/__homeSection.css">
     <link rel="stylesheet" href="CSSFiles/aboutSection/aboutSection.css">
@@ -123,18 +122,15 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section class="container-fluid p-0" id="portfolio">
-            <h1 class="portfolio-title text-center mb-2">Portföyüm</h1>
-            <div class="btn-text">
-                <button class="btn btn-primary" id="collapseBtn">
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <span class="more-text">Daha Fazla</span>
+        <section class="container-fluid p-0 border border-3 border-dark" id="portfolio">
+
+            <div class="container">
+                <div class="title">
+                    <h1 class="portfolio-title text-center mb-2">Portföyüm</h1>
+                </div>
             </div>
 
-            <div class="container overflow-hidden py-2">
+            <div class="container d-flex flex-column align-items-center my-4" id="middle-con">
                 <div class="row justify-content-center gap-2 mb-3" id="row-1">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
@@ -179,16 +175,15 @@
                                     HTML ve CSS kullanarak yapılan Profil Kart
                                 </p>
                                 <div class="sitebtn text-end px-4">
-                                    <a href="https://profile-card-css-html.netlify.app/"
-                                        target="_blank">Git</a>
+                                    <a href="https://profile-card-css-html.netlify.app/" target="_blank">Git</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- row 2 -->
-                <div class="row justify-content-center gap-1 mb-5" id="mycollapse">
+            
+                <div class="row justify-content-center gap-1" id="mycollapse">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
                             <figure class="container p-0 figure-container">
@@ -200,8 +195,7 @@
                                     HTML ve CSS kullanarak yapılan, glassmorphism background' a sahip Login Form.
                                 </p>
                                 <div class="sitebtn text-end px-4">
-                                    <a href="https://login-form-glassmorphism.netlify.app/"
-                                        target="_blank">Git</a>
+                                    <a href="https://login-form-glassmorphism.netlify.app/" target="_blank">Git</a>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +208,8 @@
                             <div class="card-body p-0">
                                 <h3 class="card-title">Dijital Saat</h3>
                                 <p class="card-info m-0">
-                                    HTML, CSS ve JavaSvript kullanarak yapmış olduğum bu proje, gerçek zamanlı saat bilgisini göstermesinin yanı sıra, sayaç ve geri sayım özelliğide bulunmaktadır.
+                                    HTML, CSS ve JavaSvript kullanarak yapmış olduğum bu proje, gerçek zamanlı saat
+                                    bilgisini göstermesinin yanı sıra, sayaç ve geri sayım özelliğide bulunmaktadır.
                                 </p>
                                 <div class="sitebtn text-end px-4">
                                     <a href="https://js-my-digital-clock.netlify.app/" target="_blank">Git</a>
@@ -241,13 +236,25 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container text-center">
+                <button class="btn btn-primary" id="collapseBtn">Daha Fazla</button>
+            </div>
+
         </section>
+
+
+
+
 
     </main>
 
 
 
-    <script src="app.js"></script>
+
+
+
+    <script src="script.js"></script>
 
 </body>
 
