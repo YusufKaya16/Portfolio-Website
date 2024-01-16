@@ -44,6 +44,7 @@ button.addEventListener('click', () =>{
     if(collapse.clientHeight){
         collapse.style.height = 0;
         collapse.style.opacity = '0';
+        collapse.style.visibility = 'hidden';
         buttonText.textContent = 'Daha Fazla';
         btnText.classList.remove('btnTextChangeClass');
 
@@ -51,6 +52,7 @@ button.addEventListener('click', () =>{
     else{
         collapse.style.height = (row1.clientHeight) +'px';
         collapse.style.opacity = '1';
+        collapse.style.visibility = 'visible';
         buttonText.textContent = 'Daha Az';
         btnText.classList.add('btnTextChangeClass');
 

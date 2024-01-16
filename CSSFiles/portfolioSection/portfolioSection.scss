@@ -4,6 +4,7 @@ body {
         position: relative;
 
         .card {
+            border-radius: 20px;
             cursor: pointer;
             transition: box-shadow .2s ease-in;
 
@@ -12,7 +13,7 @@ body {
             }
 
             .figure-container {
-                border-radius: inherit;
+                border-radius: calc(20px - 8px);
             }
 
             img {
@@ -152,6 +153,20 @@ body {
 
                     .figure-container {
                         margin-bottom: 0;
+                    }
+
+                    .card-title {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .sitebtn {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
                     }
                 }
             }

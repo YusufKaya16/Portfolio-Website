@@ -2,6 +2,7 @@ body #portfolio {
   position: relative;
 }
 body #portfolio .card {
+  border-radius: 20px;
   cursor: pointer;
   transition: box-shadow 0.2s ease-in;
 }
@@ -9,7 +10,7 @@ body #portfolio .card:hover {
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
 }
 body #portfolio .card .figure-container {
-  border-radius: inherit;
+  border-radius: 12px;
 }
 body #portfolio .card img {
   width: 100%;
@@ -121,6 +122,18 @@ body #portfolio #mycollapse {
   }
   body #portfolio .row .card .figure-container {
     margin-bottom: 0;
+  }
+  body #portfolio .row .card .card-title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body #portfolio .row .card .sitebtn {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 @media screen and (max-width: 765px) {

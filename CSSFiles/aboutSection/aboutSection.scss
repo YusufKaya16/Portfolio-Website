@@ -20,28 +20,11 @@
                     border: 2px solid black;
                     text-decoration: none;
                     color: var(--dark-color);
-                    transition: padding .2s ease-in-out;
-                    position: relative;
-
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 0%;
-                        border: 1px solid;
-                        display: block;
-                        left: 20%;
-                        visibility: hidden;
-                        transition: width .2s ease-in-out;
-                    }
-
-                    &:hover::after {
-                        width: 60%;
-                        visibility: visible;
-                    }
-
+                    transition: padding .2s ease-in-out, font-weight .2s ease-in-out;
+                    
                     &:hover {
                         padding: 20px 40px;
+                        font-weight: bold;
 
                     }
                 }
@@ -64,4 +47,5 @@
             max-width: 90%;
         }
     }
+
 }
