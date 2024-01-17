@@ -1,114 +1,116 @@
-body {
+#portfolio {
+    position: relative;
 
-    #portfolio {
-        position: relative;
+    .card {
+        border-radius: 20px;
+        cursor: pointer;
+        transition: box-shadow .2s ease-in;
 
-        .card {
-            border-radius: 20px;
-            cursor: pointer;
-            transition: box-shadow .2s ease-in;
+        &:hover {
+            box-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+        }
 
-            &:hover {
-                box-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.5);
+        .figure-container {
+            border-radius: calc(20px - 8px);
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+
+            .card-title {
+                padding-inline: 10px;
+                font-weight: 600;
+                text-wrap: nowrap;
             }
 
-            .figure-container {
-                border-radius: calc(20px - 8px);
+            .card-info {
+                text-align: justify;
+                padding-inline: 10px;
+                flex-basis: 50%;
             }
 
-            img {
-                width: 100%;
-                aspect-ratio: 1;
-                object-fit: cover;
-                border-radius: inherit;
-            }
+            .sitebtn {
+                margin-block: 20px 20px;
 
-            .card-body {
-                display: flex;
-                flex-direction: column;
+                a {
+                    background: rgba($color: #000000, $alpha: 0.3);
+                    padding: 10px 30px;
+                    border-radius: .5em;
+                    text-decoration: none;
+                    color: var(--light-color);
 
-                .card-title {
-                    padding-inline: 10px;
-                    font-weight: 600;
-                    text-wrap: nowrap;
+                    &:hover {
+                        background: rgba($color: #000000, $alpha: 0.8);
+                    }
                 }
+            }
+        }
+    }
 
-                .card-info {
-                    text-align: justify;
-                    padding-inline: 10px;
+    #mycollapse {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 200ms linear, opacity 200ms linear;
+    }
+
+    #collapseBtn {
+        min-width: 200px;
+    }
+
+    @media screen and (max-width: 990px) {
+
+        .btn-text {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .row {
+            .card {
+                width: 80%;
+                flex-direction: row;
+
+                * {
                     flex-basis: 50%;
                 }
 
+                .figure-container {
+                    margin-bottom: 0;
+                }
+
+                .card-title {
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
                 .sitebtn {
-                    margin-block: 20px 20px;
-
-                    a {
-                        background: rgba($color: #000000, $alpha: 0.3);
-                        padding: 10px 30px;
-                        border-radius: .5em;
-                        text-decoration: none;
-                        color: var(--light-color);
-
-                        &:hover {
-                            background: rgba($color: #000000, $alpha: 0.8);
-                        }
-                    }
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
                 }
             }
         }
+    }
 
-        #mycollapse {
-            height: 0;
-            opacity: 0;
-            transition: height 400ms linear, opacity 400ms linear;
-        }
+    @media screen and (max-width: 765px) {
+        .row {
+            .card {
+                width: 100%;
 
-        @media screen and (max-width: 990px) {
-
-            .btn-text {
-                position: absolute;
-                bottom: 0px;
-                right: 0px;
-            }
-
-            .row {
-                .card {
-                    width: 80%;
-                    flex-direction: row;
-
-                    * {
-                        flex-basis: 50%;
-                    }
-
-                    .figure-container {
-                        margin-bottom: 0;
-                    }
-
-                    .card-title {
-                        margin: 0;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-
-                    .sitebtn {
-                        margin: 0;
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-end;
-                    }
-                }
-            }
-        }
-
-        @media screen and (max-width: 765px) {
-            .row {
-                .card {
-                    width: 100%;
-
-                    .card-body {
-                        padding: 1px;
-                    }
+                .card-body {
+                    padding: 1px;
                 }
             }
         }

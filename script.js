@@ -37,20 +37,25 @@ setInterval(textAnimation, 18000);
 const button = document.querySelector('#collapseBtn');
 const collapse = document.querySelector('#mycollapse');
 const row1 = document.querySelector('#row-1');
+const body = document.querySelector('body');
 
 button.addEventListener('click', (event) => {
-    console.log(event.target.textContent);
 
-    // if(collapse.clientHeight){
-    //     collapse.style.height = '0';
-    //     collapse.style.opacity = '0';
-    //     collapse.style.visibility = 'hidden';
-    // }
-    // else {
-    //     collapse.style.height = (row1.clientHeight) + 'px';
-    //     collapse.style.opacity = '1';
-    //     collapse.style.visibility = 'visible';
-    // }
+    console.log(body.scrollHeight);
+
+    if(collapse.clientHeight){
+        collapse.style.height = '0';
+        collapse.style.opacity = '0';
+        collapse.style.visibility = 'hidden';
+        button.textContent = 'Daha Fazla';
+    }
+    else {
+        // scrollHeight elementin kapladığı yüksekliği verir.
+        collapse.style.height = collapse.scrollHeight + 'px';
+        collapse.style.opacity = '1';
+        collapse.style.visibility = 'visible';
+        button.textContent = 'Daha Az';
+    }
     
 })
 

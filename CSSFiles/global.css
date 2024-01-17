@@ -11,8 +11,11 @@ body{
     font-family: "Roboto", sans-serif;
     background-color: var(--light-color);
     width: 100vw;
-    min-height: 2000px;
+    min-height: 100vh;
     overflow-x: hidden;       /* x ekseni boyunca scroll bar'ı gizler */
+    display: flex;
+    flex-direction: column;
+    
 }
 
 :root{

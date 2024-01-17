@@ -18,11 +18,12 @@
 
 
     <!-- my css files -->
-    <!-- <link rel="stylesheet" href="CSSFiles/global.css"> -->
+    <link rel="stylesheet" href="CSSFiles/global.css">
     <link rel="stylesheet" href="CSSFiles/__navbar.css">
     <link rel="stylesheet" href="CSSFiles/__homeSection.css">
     <link rel="stylesheet" href="CSSFiles/aboutSection/aboutSection.css">
     <link rel="stylesheet" href="CSSFiles/portfolioSection/portfolioSection.css">
+    <link rel="stylesheet" href="CSSFiles/footerSection/footerStyle.css">
 
 
     <!-- fonts google -->
@@ -122,7 +123,7 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section class="container-fluid p-0 border border-3 border-dark" id="portfolio">
+        <section class="container-fluid p-0 mb-5" id="portfolio">
 
             <div class="container">
                 <div class="title">
@@ -130,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="container d-flex flex-column align-items-center my-4" id="middle-con">
+            <div class="container d-flex flex-column align-items-center my-4" id="deneme">
                 <div class="row justify-content-center gap-2 mb-3" id="row-1">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
@@ -182,7 +183,6 @@
                     </div>
                 </div>
 
-            
                 <div class="row justify-content-center gap-1" id="mycollapse">
                     <div class="col-lg-3 px-0 d-flex justify-content-center">
                         <div class="card p-2">
@@ -238,21 +238,57 @@
             </div>
 
             <div class="container text-center">
-                <button class="btn btn-primary" id="collapseBtn">Daha Fazla</button>
+                <button class="btn btn-primary rounded-pill" id="collapseBtn">Daha Fazla</button>
             </div>
 
         </section>
-
-
-
-
-
     </main>
 
 
+    <!-- footer section -->
+    <footer class="container-fluid p-5 d-flex" id="contact">
+        <div class="container d-flex justify-content-center align-items-center">
+            <h1 class="text-light fs-2">Yusuf KAYA</h1>
+        </div>
+        <div class="container d-flex flex-column justify-content-center align-items-center gap-4 p-0 m-0">
+            <div class="sections">
+                <ul class="d-flex justify-content-center p-0">
+                    <li class="footer-list-item d-inline"><a
+                            class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
+                            href="#home">Ana Sayfa</a></li>
+                    <li class="footer-list-item d-inline"><a
+                            class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
+                            href="#about">Hakkımda</a></li>
+                    <li class="footer-list-item d-inline"><a
+                            class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
+                            href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <ul class="d-flex justify-content-center p-0">
+                    <li class="d-inline">
+                        <a class="text-decoration-none text-light text-uppercase px-4 py-3"
+                            href="https://www.instagram.com/yyusufkya/" target="_blank">
+                            <i class="fab fa-instagram fs-5"></i></a>
+                    </li>
+                    <li class="d-inline">
+                        <a class="text-decoration-none text-light text-uppercase px-4 py-3"
+                            href="https://www.linkedin.com/in/yusufkaya16/" target="_blank">
+                            <i class="fab fa-linkedin-in fs-5"></i></a>
+                    </li>
+                    <li class="d-inline">
+                        <a class="text-decoration-none text-light text-uppercase px-4 py-3"
+                            href="https://github.com/YusufKaya16" target="_blank">
+                            <i class="fab fa-github fs-5"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-center align-items-center order-0">
+            <button class="contact-btn-style">İletişim</button>
+        </div>
 
-
-
+    </footer>
 
     <script src="script.js"></script>
 

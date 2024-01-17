@@ -1,4 +1,4 @@
-@import "global.css";
+@import "/CSSFiles/global.css";
 #about .container {
   max-width: 600px;
   border-top: 3px solid #696969;
