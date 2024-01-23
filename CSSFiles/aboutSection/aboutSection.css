@@ -1,4 +1,7 @@
 @import "/CSSFiles/global.css";
+#about .about-title {
+  color: var(--information-text-color);
+}
 #about .container {
   max-width: 600px;
   border-top: 3px solid #696969;
@@ -7,20 +10,37 @@
   max-width: 100%;
   font-size: 1.3rem;
 }
-#about .container .information p {
+#about .container .information .about-information {
   text-align: justify;
+  color: var(--information-text-color);
 }
-#about .container .information .moreBtn a {
-  padding: 10px 30px;
-  border-radius: 50px;
-  border: 2px solid black;
-  text-decoration: none;
-  color: var(--dark-color);
-  transition: padding 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+#about .container .information .btn-cv {
+  color: var(--cv-btn-color);
+  width: 200px;
+  height: 40px;
+  border-radius: 40px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 200ms ease;
 }
-#about .container .information .moreBtn a:hover {
-  padding: 20px 40px;
-  font-weight: bold;
+#about .container .information .btn-cv::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 150%;
+  background: linear-gradient(to right, var(--cv-btn-before-color-gray), var(--cv-btn-before-color-secondary), var(--cv-btn-before-color-gray));
+  left: -60px;
+  top: -10px;
+  transform: rotate(15deg);
+  transition: left 300ms ease-in;
+  box-shadow: 0px 4px 20px var(--cv-btn-before-color-gray);
+}
+#about .container .information .btn-cv:hover::before {
+  left: 230px;
+}
+#about .container .information .btn-cv:hover {
+  box-shadow: 3px 4px 6px var(--cv-btn-before-color-gray);
 }
 @media screen and (max-width: 990px) {
   #about .container .information {
@@ -29,16 +49,18 @@
 }
 @media screen and (max-width: 765px) {
   #about .container .information {
-    margin-inline: 20px;
+    margin-inline: 0;
   }
 }
 @media screen and (max-width: 990px) {
   #about .container {
     max-width: 80%;
+    padding-inline: 0 !important;
   }
 }
 @media screen and (max-width: 765px) {
   #about .container {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 0;
   }
 }/*# sourceMappingURL=aboutSection.css.map */

@@ -2,18 +2,17 @@ const toggleBtn = document.querySelector('#checkbox');
 const navbar = document.querySelector('.navbar');
 const home = document.querySelector('#home');
 
+const body = document.querySelector('body');
+
 
 toggleBtn.addEventListener('change', (event) => {
 
     if (event.target.checked) {
-        navbar.classList.add('navbar-toggleStyle');
-        home.classList.add('home-toggleStyle');
+        body.classList.add('darkMode');
 
     }
     else {
-        navbar.classList.remove('navbar-toggleStyle');
-        home.classList.remove('home-toggleStyle');
-
+        body.classList.remove('darkMode');
     }
 })
 
@@ -37,13 +36,12 @@ setInterval(textAnimation, 18000);
 const button = document.querySelector('#collapseBtn');
 const collapse = document.querySelector('#mycollapse');
 const row1 = document.querySelector('#row-1');
-const body = document.querySelector('body');
 
 button.addEventListener('click', (event) => {
 
     console.log(body.scrollHeight);
 
-    if(collapse.clientHeight){
+    if (collapse.clientHeight) {
         collapse.style.height = '0';
         collapse.style.opacity = '0';
         collapse.style.visibility = 'hidden';
@@ -56,7 +54,7 @@ button.addEventListener('click', (event) => {
         collapse.style.visibility = 'visible';
         button.textContent = 'Daha Az';
     }
-    
+
 })
 
 

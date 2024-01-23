@@ -15,7 +15,42 @@ body{
     overflow-x: hidden;       /* x ekseni boyunca scroll bar'ı gizler */
     display: flex;
     flex-direction: column;
+    transition: background 100ms linear;
     
+}
+
+.btnStyleBaseClass{
+    color: var(--light-color);
+    width: 200px;
+    height: 40px;
+    border-radius: 40px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 200ms ease;
+}
+
+
+.btnStyleBaseClass::before {
+    position: absolute;
+    content: '';
+    width: 20%;
+    height: 150%;
+    background: linear-gradient(to right, gray, white, gray);
+    left: -55px;
+    top: -10px;
+    transform: rotate(15deg);
+    transition: left 300ms ease-in;
+    box-shadow: 0px 4px 20px white;
+}
+
+
+.btnStyleBaseClass:hover::before {
+    left: 230px;
+}
+
+.btnStyleBaseClass:hover {
+    box-shadow: 3px 4px 6px white;
 }
 
 :root{
@@ -26,14 +61,46 @@ body{
     --link-after-color: #FF0000;
     --navbar-toggler-color: black;
     --text-animation-color: #696969;
+
+    /* navbar color */
+    --navbar-brand-color: #fff;
+    --navbar-link-color: #000;
+    --border-color: #000;
+    --slider-color: #fff;
+
+    /* home colors */
+    --social-links-color: #000;
+    --social-links-outline-color: #000;
+    --social-links-background: #000;
+    --information-titles-color: #000;
+    --information-developer-color: #696969;
+    --home-right-background-color: #fff;
+    --home-left-background-color: #696969;
+
+    /* about colors */
+    --information-text-color: #000;
+    --cv-btn-color: #000;    
+    --cv-btn-before-color-gray: #696969;
+    --cv-btn-before-color-secondary: #fff;
+
+    /* portfolio colors */
+    --card-color: #fff;
+    --card-text-color: #000;
+    --card-go-btn-background: rgba(0,0,0, .3);
+    --card-go-btn-color: #000;
+    --card-boxshadow-color: rgba(0, 0, 0, 0.5);
 }
 
-.navbar-toggleStyle{
-    --navbar-brand-color: #000;
+.darkMode{
+
+    /* navbar color change */
     --navbar-link-color: #fff;
-}
+    --border-color: #fff;
+    --slider-color: #000;
 
-.home-toggleStyle{
+
+
+    /* home color change */
     --social-links-color: #fff;
     --social-links-outline-color:  #f73505;
     --social-links-background: #f73505;
@@ -42,5 +109,18 @@ body{
     --home-right-background-color: #000;
     --light-color: #000;
     --text-animation-color: #f73505;
-}
 
+    /* about color change */
+    --information-text-color: #fff;
+    --cv-btn-color: #fff;
+    --cv-btn-before-color-gray: #fff;
+
+    /* portfolio color change */
+    --card-color: #696969;
+    --card-text-color: #fff;
+    --card-go-btn-background: #292724;
+    --card-go-btn-color: #fff;
+    --card-boxshadow-color: rgba(255, 255, 255, 1);
+
+
+}

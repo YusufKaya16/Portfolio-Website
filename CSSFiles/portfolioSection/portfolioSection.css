@@ -1,13 +1,19 @@
+@import "/CSSFiles/global.css";
 #portfolio {
   position: relative;
 }
+#portfolio .portfolio-title {
+  color: var(--card-text-color);
+}
 #portfolio .card {
+  background: var(--card-color);
+  color: var(--card-text-color);
   border-radius: 20px;
   cursor: pointer;
   transition: box-shadow 0.2s ease-in;
 }
 #portfolio .card:hover {
-  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 5px 10px var(--card-boxshadow-color);
 }
 #portfolio .card .figure-container {
   border-radius: 12px;
@@ -37,14 +43,15 @@
   margin-block: 20px 20px;
 }
 #portfolio .card .card-body .sitebtn a {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--card-go-btn-background);
   padding: 10px 30px;
   border-radius: 0.5em;
   text-decoration: none;
-  color: var(--light-color);
+  color: var(--card-go-btn-color);
 }
 #portfolio .card .card-body .sitebtn a:hover {
   background: rgba(0, 0, 0, 0.8);
+  color: #fff;
 }
 #portfolio #mycollapse {
   height: 0;
@@ -52,15 +59,35 @@
   visibility: hidden;
   transition: height 200ms linear, opacity 200ms linear;
 }
-#portfolio #collapseBtn {
-  min-width: 200px;
+#portfolio .more-btn {
+  color: var(--cv-btn-color);
+  width: 200px;
+  height: 40px;
+  border-radius: 40px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 200ms ease;
+}
+#portfolio .more-btn::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 150%;
+  background: linear-gradient(to right, var(--cv-btn-before-color-gray), var(--cv-btn-before-color-secondary), var(--cv-btn-before-color-gray));
+  left: -60px;
+  top: -10px;
+  transform: rotate(15deg);
+  transition: left 300ms ease-in;
+  box-shadow: 0px 4px 20px var(--cv-btn-before-color-gray);
+}
+#portfolio .more-btn:hover::before {
+  left: 230px;
+}
+#portfolio .more-btn:hover {
+  box-shadow: 3px 4px 6px var(--cv-btn-before-color-gray);
 }
 @media screen and (max-width: 990px) {
-  #portfolio .btn-text {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-  }
   #portfolio .row .card {
     width: 80%;
     flex-direction: row;

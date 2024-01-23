@@ -1,25 +1,13 @@
 @import "/CSSFiles/global.css";
 
-:root {
-    --social-links-color: #000;
-    --social-links-outline-color: #000;
-    --social-links-background: #000;
-    --information-titles-color: #000;
-    --information-developer-color: #696969;
-    --home-right-background-color: #fff;
-    --home-left-background-color: #696969;
-}
 
 #home {
     height: 100vh;
     border-bottom: 3px solid var(--home-left-background-color);
     background: linear-gradient(to right, var(--home-left-background-color) 0%, var(--home-left-background-color)30%,
-            var(--home-right-background-color) 30%, var(--home-right-background-color) 100%);
+            transparent 30%, transparent 100%);
 
-    transition: background .3s ease;
 }
-
-
 
 #home #content .circle-container {
     width: 400px;
@@ -78,7 +66,7 @@ h2 {
     height: 100%;
     border-left: 2px solid var(--text-animation-color);
     background: var(--light-color);
-    animation: text-animation 6s linear  infinite;
+    animation: text-animation 6s linear infinite;
     left: -5px;
     bottom: -2px;
 }
@@ -92,7 +80,8 @@ h2 {
     60% {
         left: 105%;
     }
-    100%{
+
+    100% {
         left: 0%;
     }
 }
