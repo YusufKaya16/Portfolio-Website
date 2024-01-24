@@ -11,6 +11,7 @@
   font-size: 1.3rem;
 }
 #about .container .information .about-information {
+  font-size: clamp(1rem, 2vw, 1.3rem);
   text-align: justify;
   color: var(--information-text-color);
 }
@@ -41,11 +42,6 @@
 }
 #about .container .information .btn-cv:hover {
   box-shadow: 3px 4px 6px var(--cv-btn-before-color-gray);
-}
-@media screen and (max-width: 990px) {
-  #about .container .information {
-    font-size: 1.5em;
-  }
 }
 @media screen and (max-width: 765px) {
   #about .container .information {

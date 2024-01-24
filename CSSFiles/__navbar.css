@@ -105,3 +105,15 @@
 #checkbox:checked+.toggle-button::after {
     transform: translateX(37px);
 }
+
+.active {
+    color: var(--link-after-color) !important;
+}
+
+.navbar{
+    transition: all 150ms;
+}
+
+.navbarScrollEfect{
+    backdrop-filter: blur(20px);
+}

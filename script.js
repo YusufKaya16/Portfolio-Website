@@ -1,9 +1,7 @@
 const toggleBtn = document.querySelector('#checkbox');
 const navbar = document.querySelector('.navbar');
 const home = document.querySelector('#home');
-
 const body = document.querySelector('body');
-
 
 toggleBtn.addEventListener('change', (event) => {
 
@@ -35,17 +33,19 @@ setInterval(textAnimation, 18000);
 
 const button = document.querySelector('#collapseBtn');
 const collapse = document.querySelector('#mycollapse');
-const row1 = document.querySelector('#row-1');
+
+const mediaQ = () => {
+    collapse.style.height = '0';
+    collapse.style.opacity = '0';
+    collapse.style.visibility = 'hidden';
+    button.textContent = 'Daha Fazla';
+}
+
 
 button.addEventListener('click', (event) => {
 
-    console.log(body.scrollHeight);
-
     if (collapse.clientHeight) {
-        collapse.style.height = '0';
-        collapse.style.opacity = '0';
-        collapse.style.visibility = 'hidden';
-        button.textContent = 'Daha Fazla';
+        mediaQ();
     }
     else {
         // scrollHeight elementin kapladığı yüksekliği verir.
@@ -54,9 +54,33 @@ button.addEventListener('click', (event) => {
         collapse.style.visibility = 'visible';
         button.textContent = 'Daha Az';
     }
-
 })
 
+const win = window.matchMedia('(max-width: 990px)');
+win.addEventListener('change', () => {
+    mediaQ();
+});
+
+const allLinkArr = navbar.querySelectorAll('.link');
+
+allLinkArr.forEach(element => {
+    element.addEventListener('click', function () {
+        let activeElement = document.querySelector('.active');
+        activeElement.className = activeElement.className.replace(" active", "");
+        this.className += " active";
+    })
+});
 
 
+window.onscroll = function(){
+    console.log(document.documentElement.scrollTop);
+    if(document.documentElement.scrollTop > 100){
+        // navbar.classList.add('navbarScrollEfect');
+        navbar.style.backdropFilter = 'blur(20px)';
+    }
+    else{
+        // navbar.classList.remove('navbarScrollEfect');
+        navbar.style.backdropFilter = "";
+    }
+}
 
