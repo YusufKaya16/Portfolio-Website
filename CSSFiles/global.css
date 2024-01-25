@@ -1,25 +1,29 @@
 @import "__navbar.css";
 @import "__homeSection.css";
 
-*{
+
+* {
+    /* margin padding geçersiz, Bootstrap kullanılıyor ! */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+
+body {
+
     font-family: "Roboto", sans-serif;
     background-color: var(--light-color);
     width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden;       /* x ekseni boyunca scroll bar'ı gizler */
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     transition: background 100ms linear;
-    
 }
 
-.btnStyleBaseClass{
+
+.btnStyleBaseClass {
     color: var(--light-color);
     width: 200px;
     height: 40px;
@@ -53,7 +57,7 @@ body{
     box-shadow: 3px 4px 6px white;
 }
 
-:root{
+:root {
 
     --gray-color: #696969;
     --light-color: #fff;
@@ -79,19 +83,19 @@ body{
 
     /* about colors */
     --information-text-color: #000;
-    --cv-btn-color: #000;    
+    --cv-btn-color: #000;
     --cv-btn-before-color-gray: #696969;
     --cv-btn-before-color-secondary: #fff;
 
     /* portfolio colors */
     --card-color: #fff;
     --card-text-color: #000;
-    --card-go-btn-background: rgba(0,0,0, .3);
+    --card-go-btn-background: rgba(0, 0, 0, .3);
     --card-go-btn-color: #000;
     --card-boxshadow-color: rgba(0, 0, 0, 0.5);
 }
 
-.darkMode{
+.darkMode {
 
     /* navbar color change */
     --navbar-link-color: #fff;
@@ -102,7 +106,7 @@ body{
 
     /* home color change */
     --social-links-color: #fff;
-    --social-links-outline-color:  #f73505;
+    --social-links-outline-color: #f73505;
     --social-links-background: #f73505;
     --information-developer-color: #f73505;
     --information-titles-color: #fff;

@@ -2,9 +2,39 @@ const toggleBtn = document.querySelector('#checkbox');
 const navbar = document.querySelector('.navbar');
 const home = document.querySelector('#home');
 const body = document.querySelector('body');
+const collapseButton = document.querySelector('#collapseBtn');
+const collapseSection = document.querySelector('#mycollapse');
+const allLinkArr = navbar.querySelectorAll('.link');
+const cvButton = document.querySelector('.btn-cv');
 
-toggleBtn.addEventListener('change', (event) => {
+function allEvents() {
+    toggleBtn.addEventListener('change', toggleBtnChange);
+    collapseButton.addEventListener('click', collapseView);
+    cvButton.addEventListener('click', downloadCV);
 
+}
+
+allEvents();
+
+const sliderText = document.querySelector('.slider-text');
+
+const textAnimation = function () {
+    setTimeout(() => {
+        sliderText.textContent = 'Web Developer';
+    }, 0);
+    setTimeout(() => {
+        sliderText.textContent = 'Back-end';
+    }, 6000);
+
+    setTimeout(() => {
+        sliderText.textContent = 'Freelancer';
+    }, 12000);
+}
+
+textAnimation();
+setInterval(textAnimation, 18000);
+
+function toggleBtnChange(event) {
     if (event.target.checked) {
         body.classList.add('darkMode');
 
@@ -12,75 +42,58 @@ toggleBtn.addEventListener('change', (event) => {
     else {
         body.classList.remove('darkMode');
     }
-})
-
-const sliderText = document.querySelector('.slider-text');
-const textAnimation = function () {
-    setTimeout(() => {
-        sliderText.textContent = 'Web Developer';
-    }, 0);
-    setTimeout(() => {
-        sliderText.textContent = 'Back-end';
-    }, 5999);
-
-    setTimeout(() => {
-        sliderText.textContent = 'Freelancer';
-    }, 11999);
 }
 
-textAnimation();
-setInterval(textAnimation, 18000);
-
-const button = document.querySelector('#collapseBtn');
-const collapse = document.querySelector('#mycollapse');
 
 const mediaQ = () => {
-    collapse.style.height = '0';
-    collapse.style.opacity = '0';
-    collapse.style.visibility = 'hidden';
-    button.textContent = 'Daha Fazla';
+    collapseSection.style.height = '0';
+    collapseSection.style.opacity = '0';
+    collapseSection.style.visibility = 'hidden';
+    collapseButton.textContent = 'Daha Fazla';
 }
 
-
-button.addEventListener('click', (event) => {
-
-    if (collapse.clientHeight) {
+function collapseView(event) {
+    if (collapseSection.clientHeight) {
         mediaQ();
     }
     else {
-        // scrollHeight elementin kapladığı yüksekliği verir.
-        collapse.style.height = collapse.scrollHeight + 'px';
-        collapse.style.opacity = '1';
-        collapse.style.visibility = 'visible';
-        button.textContent = 'Daha Az';
+        collapseSection.style.height = collapseSection.scrollHeight + 'px';
+        collapseSection.style.opacity = '1';
+        collapseSection.style.visibility = 'visible';
+        collapseButton.textContent = 'Daha Az';
     }
-})
+
+}
 
 const win = window.matchMedia('(max-width: 990px)');
-win.addEventListener('change', () => {
-    mediaQ();
-});
-
-const allLinkArr = navbar.querySelectorAll('.link');
+win.addEventListener('change', () => { mediaQ() });
 
 allLinkArr.forEach(element => {
     element.addEventListener('click', function () {
-        let activeElement = document.querySelector('.active');
+        let activeElement = navbar.querySelector('.active');
         activeElement.className = activeElement.className.replace(" active", "");
         this.className += " active";
     })
 });
 
 
-window.onscroll = function(){
-    console.log(document.documentElement.scrollTop);
-    if(document.documentElement.scrollTop > 100){
-        // navbar.classList.add('navbarScrollEfect');
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 100) {
         navbar.style.backdropFilter = 'blur(20px)';
     }
-    else{
-        // navbar.classList.remove('navbarScrollEfect');
+    else {
         navbar.style.backdropFilter = "";
     }
+};
+
+function downloadCV(event) {
+
+    const anchorElement = document.createElement('a');
+    anchorElement.setAttribute('href', 'CV/Yusuf_KAYA_CV.pdf');
+    anchorElement.setAttribute('download', 'Yusuf_KAYA_CV');
+    body.appendChild(anchorElement);
+    anchorElement.click();
+    body.removeChild(anchorElement);
+
 }
 

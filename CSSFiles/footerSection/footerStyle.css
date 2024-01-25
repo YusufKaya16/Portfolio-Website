@@ -29,6 +29,7 @@
 }
 
 #contact {
+  max-height: 250px;
   background-color: gray;
 }
 #contact .footer-list-item {
