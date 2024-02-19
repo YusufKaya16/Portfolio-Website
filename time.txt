@@ -1,4 +1,10 @@
 00.10 start
 02.10 mola
+
 02.38 start
+04.38 mola
+
+05.00 start
+05.50 finish
+
 

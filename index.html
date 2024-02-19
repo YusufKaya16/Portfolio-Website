@@ -43,18 +43,21 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
             <div class="container-fluid">
+
                 <a class="navbar-brand" href="https://www.linkedin.com/in/yusufkaya16/" target="_blank">
                     <i class="fa-sharp fa-solid fa-y" id="brandIcon"></i>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+
+                <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto text-center">
                         <li class="nav-item"><a class="nav-link link active" href="#home">Ana Sayfa</a></li>
@@ -64,13 +67,14 @@
                     </ul>
                 </div>
 
-                <div class="toggle-container">
+                <div class="toggle-container d-flex">
                     <input type="checkbox" id="checkbox">
                     <label class="toggle-button" for="checkbox">
                         <i class="fa fa-sun" id="sun"></i>
                         <i class="fa fa-moon" id="moon"></i>
                     </label>
                 </div>
+
             </div>
         </nav>
     </header>
@@ -252,7 +256,7 @@
     </section> -->
 
     <!-- footer section -->
-    <footer class="container-fluid p-2 d-flex" id="contact">
+    <footer class="container-fluid py-4 d-flex" id="contact">
         <div class="container d-flex justify-content-center align-items-center">
             <h1 class="text-light fs-2">Yusuf KAYA</h1>
         </div>
@@ -294,8 +298,13 @@
             <button class="contact-btn-style">İletişim</button>
         </div>
     </footer>
+    <!-- gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
+    <!-- my script files -->
     <script src="script.js"></script>
+    <script src="gsap.js"></script>
+    <script src="textanim.js"></script>
 
 </body>
 

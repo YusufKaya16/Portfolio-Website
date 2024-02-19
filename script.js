@@ -16,23 +16,6 @@ function allEvents() {
 
 allEvents();
 
-const sliderText = document.querySelector('.slider-text');
-
-const textAnimation = function () {
-    setTimeout(() => {
-        sliderText.textContent = 'Web Developer';
-    }, 0);
-    setTimeout(() => {
-        sliderText.textContent = 'Back-end';
-    }, 6000);
-
-    setTimeout(() => {
-        sliderText.textContent = 'Freelancer';
-    }, 12000);
-}
-
-textAnimation();
-setInterval(textAnimation, 18000);
 
 function toggleBtnChange(event) {
     if (event.target.checked) {
@@ -43,7 +26,6 @@ function toggleBtnChange(event) {
         body.classList.remove('darkMode');
     }
 }
-
 
 const mediaQ = () => {
     collapseSection.style.height = '0';
@@ -65,9 +47,9 @@ function collapseView(event) {
 
 }
 
+// active link
 const win = window.matchMedia('(max-width: 990px)');
 win.addEventListener('change', () => { mediaQ() });
-
 allLinkArr.forEach(element => {
     element.addEventListener('click', function () {
         let activeElement = navbar.querySelector('.active');
@@ -76,14 +58,9 @@ allLinkArr.forEach(element => {
     })
 });
 
-
+// navbar background
 window.onscroll = function () {
-    if (document.documentElement.scrollTop > 100) {
-        navbar.style.backdropFilter = 'blur(20px)';
-    }
-    else {
-        navbar.style.backdropFilter = "";
-    }
+    (document.documentElement.scrollTop > 100) ? navbar.style.backdropFilter = 'blur(20px)' : navbar.style.backdropFilter = '';
 };
 
 function downloadCV(event) {

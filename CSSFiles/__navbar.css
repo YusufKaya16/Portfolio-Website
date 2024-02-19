@@ -1,119 +1,128 @@
-@import "/CSSFiles/global.css";
-
-.navbar-brand #brandIcon {
-    font-size: 2rem;
-    margin-left: 3rem;
-    transition: transform .3s ease, color .5s ease;
-    color: var(--navbar-brand-color);
-}
-
-.navbar-brand #brandIcon:hover {
-    transform: scale(1.2, 1.2);
-}
-
-/* navbar link list */
-.navbar-collapse .navbar-nav {
-    padding: .625rem;
-}
-
-@media screen and (max-width: 990px) {
-    .navbar-collapse .navbar-nav {
-        background: transparent;
-        backdrop-filter: blur(10px);
-    }
-}
-
-.collapse .navbar-nav .nav-link {
-    color: var(--navbar-link-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    transition: color .5s ease;
-    display: inline-block;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--link-after-color);
-}
-
-.navbar-nav .link {
-    position: relative;
-    padding-inline: 20px !important;
-}
-
-.link::after {
-    content: "";
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    position: absolute;
-    visibility: hidden;
-    border: 1px solid var(--link-after-color);
-    transition: width .2s ease-in;
-}
-
-.link:hover::after {
-    visibility: visible;
-    width: 100%;
-}
+ @import "/CSSFiles/global.css";
 
 
-.toggle-button {
-    width: 70px;
-    height: 35px;
-    background: var(--gray-color);
-    border: 1px solid var(--border-color);
-    border-radius: 100px;
-    display: inline-block;
-    position: relative;
-    font-size: 10px;
-    cursor: pointer;
-}
+ .navbar-brand #brandIcon {
+     font-size: 2rem;
+     margin-left: 3rem;
+     transition: transform .3s ease, color .5s ease;
+     color: var(--navbar-brand-color);
+ }
 
-.toggle-button::after {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 85%;
-    background: var(--slider-color);
-    border-radius: 100%;
-    transition: transform 0.2s ease;
-    top: 2px;
-    left: 2px;
-}
 
-.toggle-button i {
-    position: absolute;
-    top: 11px;
-    font-size: 1.25em;
-    color: #fff;
-}
+ .navbar-brand #brandIcon:hover {
+     transform: scale(1.2, 1.2);
+ }
 
-.toggle-button #sun {
-    left: 10px;
-}
+ /* navbar link list */
+ .navbar-collapse .navbar-nav {
+     padding: .625rem;
+ }
 
-.toggle-button #moon {
-    right: 10px;
-}
+ .collapse .navbar-nav .nav-link {
+     color: var(--navbar-link-color);
+     font-size: 1rem;
+     text-transform: uppercase;
+     transition: color .5s ease;
+     display: inline-block;
+ }
 
-#checkbox {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
+ .navbar-nav .nav-link:hover {
+     color: var(--link-after-color);
+ }
 
-#checkbox:checked+.toggle-button::after {
-    transform: translateX(37px);
-}
+ .navbar-nav .link {
+     position: relative;
+     padding-inline: 20px !important;
+ }
 
-.active {
-    color: var(--link-after-color) !important;
-}
+ .link::after {
+     content: "";
+     left: 0;
+     bottom: 0;
+     width: 0%;
+     position: absolute;
+     visibility: hidden;
+     border: 1px solid var(--link-after-color);
+     transition: width .2s ease-in;
+ }
 
-.navbar{
-    transition: all 150ms;
-}
+ .link:hover::after {
+     visibility: visible;
+     width: 100%;
+ }
 
-.navbarScrollEfect{
-    backdrop-filter: blur(20px);
-}
+ .toggle-button {
+     width: 70px;
+     height: 35px;
+     background: var(--gray-color);
+     border: 1px solid var(--border-color);
+     border-radius: 100px;
+     display: inline-block;
+     position: relative;
+     font-size: 10px;
+     cursor: pointer;
+ }
+
+ .toggle-button::after {
+     content: "";
+     position: absolute;
+     width: 40%;
+     height: 85%;
+     background: var(--slider-color);
+     border-radius: 100%;
+     transition: transform 0.2s ease;
+     top: 2px;
+     left: 2px;
+ }
+
+ .toggle-button i {
+     position: absolute;
+     top: 11px;
+     font-size: 1.25em;
+     color: #fff;
+ }
+
+ .toggle-button #sun {
+     left: 10px;
+ }
+
+ .toggle-button #moon {
+     right: 10px;
+ }
+
+ #checkbox {
+     width: 0;
+     height: 0;
+     visibility: hidden;
+ }
+
+ #checkbox:checked+.toggle-button::after {
+     transform: translateX(37px);
+ }
+
+ @media screen and (max-width: 990px) {
+     .navbar-collapse {
+         position: absolute;
+         left: 0;
+         top: 60px;
+         width: 100%;
+         border-radius: 1rem;
+         background: #696969;
+     }
+
+     .navbar-brand #brandIcon {
+         --navbar-brand-color: #000;
+     }
+ }
+ 
+ .active {
+     color: var(--link-after-color) !important;
+ }
+
+ .navbar {
+     transition: all 150ms;
+ }
+
+ .navbarScrollEfect {
+     backdrop-filter: blur(20px);
+ }
