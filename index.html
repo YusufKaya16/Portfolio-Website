@@ -46,18 +46,15 @@
 
     <header>
         <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
-            <div class="container-fluid">
-
+            <div class="container-fluid" id="navbar">
                 <a class="navbar-brand" href="https://www.linkedin.com/in/yusufkaya16/" target="_blank">
                     <i class="fa-sharp fa-solid fa-y" id="brandIcon"></i>
                 </a>
-
                 <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto text-center">
                         <li class="nav-item"><a class="nav-link link active" href="#home">Ana Sayfa</a></li>
@@ -66,7 +63,6 @@
                         <li class="nav-item"><a class="nav-link link" href="#contact">iletişim</a></li>
                     </ul>
                 </div>
-
                 <div class="toggle-container d-flex">
                     <input type="checkbox" id="checkbox">
                     <label class="toggle-button" for="checkbox">
@@ -74,7 +70,6 @@
                         <i class="fa fa-moon" id="moon"></i>
                     </label>
                 </div>
-
             </div>
         </nav>
     </header>
@@ -83,18 +78,18 @@
     <main>
 
         <!-- Home Section -->
-        <section class="container-fluid d-flex" id="home">
-            <div class="container-fluid d-flex justify-content-evenly align-items-center" id="content">
+        <section class="container-fluid" id="home">
+            <div class="container h-100 d-flex align-items-center justify-content-evenly" id="content">
                 <div class="circle-container d-flex justify-content-center align-items-center">
                     <div class="circle-inner d-flex justify-content-center align-items-center">
                         <img class="img-fluid" src="CSSFiles/images/nonback.png" alt="myphoto">
                     </div>
                 </div>
-                <div class="information">
-                    <div class="titles">
-                        <h1>Merhaba Ben Yusuf</h1>
+                <article class="home-information">
+                    <header class="title-group">
+                        <h1 class="title">Merhaba Ben Yusuf</h1>
                         <span class="slider-text">Web Developer</span>
-                    </div>
+                    </header>
                     <div class="social-main-container">
                         <div class="social-media-links d-flex">
                             <a class="linkStyle" href="https://www.instagram.com/yyusufkya/" target="_blank"><i
@@ -105,24 +100,60 @@
                                     class="fab fa-github"></i></a>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="container-fluid m-2" id="about">
-            <h1 class="about-title text-center my-3 fw-bold">Hakkımda</h1>
-            <div class="container my-5 rounded-3 p-4">
-                <article class="information d-flex flex-column gap-5">
-                    <p class="about-information px-3">
+        <section class="container-fluid my-3" id="about">
+
+            <div class="container d-flex flex-column align-items-center gap-5">
+                <article class="information">
+                    <h1 class="about-title text-center my-3 fw-bold">Hakkımda</h1>
+                    <p class="about-information p-4">
                         Merhabalar ben Yusuf Kaya. Elektrik Elektronik Mühendisliği mezunuyum. Sektör değiştirerek
                         Web
                         Developer alanına yöneldim. Backend Developer olabilmek için projeler geliştiriyorum ve
                         kendi
                         portfolio websitemde yayınlıyorum.
                     </p>
-                    <div class="container text-center border-0">
+                    <div class="text-center mt-5">
                         <button class="btn-cv">CV</button>
+                    </div>
+                </article>
+
+                <article class="skills w-100 pb-4 px-3">
+                    <h1 class="about-title text-center mb-4 fw-bold">Beceriler</h1>
+
+                    <div class="row" id="skill-content">
+                        <div class="col-sm-8 offset-2">
+                            <div class="row gy-3">
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">HTML</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">CSS</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">JavaScript</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">C</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">Bootstrap</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">SASS</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">SQL</span>
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -214,7 +245,7 @@
                             <div class="card-body p-0">
                                 <h3 class="card-title">Dijital Saat</h3>
                                 <p class="card-info m-0">
-                                    HTML, CSS ve JavaSvript kullanarak yapmış olduğum bu proje, gerçek zamanlı saat
+                                    HTML, CSS ve JavaScript kullanarak yapmış olduğum bu proje, gerçek zamanlı saat
                                     bilgisini göstermesinin yanı sıra, sayaç ve geri sayım özelliğide bulunmaktadır.
                                 </p>
                                 <div class="sitebtn text-end px-4">
@@ -300,6 +331,8 @@
     </footer>
     <!-- gsap cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- scrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- my script files -->
     <script src="script.js"></script>

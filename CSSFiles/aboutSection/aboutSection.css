@@ -2,18 +2,16 @@
 #about .about-title {
   color: var(--information-text-color);
 }
-#about .container {
-  max-width: 600px;
-  border-top: 3px solid #696969;
-}
 #about .container .information {
-  max-width: 100%;
+  max-width: 600px;
   font-size: 1.3rem;
 }
 #about .container .information .about-information {
   font-size: clamp(1rem, 2vw, 1.3rem);
   text-align: justify;
   color: var(--information-text-color);
+  border-top: 5px solid #696969;
+  border-radius: 1rem;
 }
 #about .container .information .btn-cv {
   color: var(--cv-btn-color);
@@ -59,4 +57,22 @@
     max-width: 100%;
     padding: 0;
   }
+}
+#about .container .skills .skill-tag {
+  width: 90%;
+  text-align: center;
+  padding-block: 10px;
+  border-radius: 0.5rem;
+  color: var(--tag-dark-color);
+  box-shadow: 0px 5px 10px var(--tag-card-shadow);
+  transition: transform 200ms ease-in-out;
+  background: var(--tag-card-bg);
+}
+#about .container .skills .tagDiv:hover .skill-tag {
+  transform: rotateZ(-5deg) rotateY(-20deg) rotateX(10deg);
+}
+#about .container .skills #skill-content {
+  border-left: 5px solid var(--tag-card-bg);
+  border-right: 5px solid var(--tag-card-bg);
+  border-radius: 0.8rem;
 }/*# sourceMappingURL=aboutSection.css.map */

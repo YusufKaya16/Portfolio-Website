@@ -86,6 +86,9 @@ body {
     --cv-btn-color: #000;
     --cv-btn-before-color-gray: #696969;
     --cv-btn-before-color-secondary: #fff;
+    --tag-dark-color: #000;
+    --tag-card-shadow: #696969;
+    --tag-card-bg: rgba(105, 105, 105, .5);
 
     /* portfolio colors */
     --card-color: #fff;
@@ -118,6 +121,11 @@ body {
     --information-text-color: #fff;
     --cv-btn-color: #fff;
     --cv-btn-before-color-gray: #fff;
+    --tag-dark-color: #fff;
+    --tag-card-shadow: rgba(255, 255, 255, .8);
+    --tag-card-bg: rgba(71, 69, 69, 1);
+
+
 
     /* portfolio color change */
     --card-color: #696969;

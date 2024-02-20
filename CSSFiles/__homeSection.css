@@ -36,19 +36,19 @@
     border-radius: 100%;
 }
 
-#home #content .information {
+#home #content .home-information {
     text-align: right;
 }
 
-#home #content .information .titles h1,
+#home #content .home-information .title-group .title,
 h2 {
-    color: var(--information-titles-color);
+    color: var(--home-information-title-group-color);
     font-weight: bold;
     transition: color .5s ease;
 
 }
 
-#home #content .information .titles .slider-text {
+#home #content .home-information .title-group .slider-text {
     position: relative;
     font-size: 2.5em;
     font-weight: bold;
