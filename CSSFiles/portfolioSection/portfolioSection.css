@@ -1,121 +1,55 @@
 @import "/CSSFiles/global.css";
-#portfolio {
+#portfolio .portfolio-title {
+  color: var(--card-title-color);
+  transition: color 200ms linear;
+}
+#portfolio .content {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px gray;
+  max-width: 306px;
+  background: var(--card-bg-color);
+}
+#portfolio .content figure {
+  height: 200px;
   position: relative;
 }
-#portfolio .portfolio-title {
-  color: var(--card-text-color);
+#portfolio .content figure:hover .figure-img {
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, var(--figure-mask-color) 100%);
+  mask-image: linear-gradient(to top, transparent 5%, var(--figure-mask-color) 100%);
 }
-#portfolio .card {
-  background: var(--card-color);
-  color: var(--card-text-color);
-  border-radius: 20px;
-  cursor: pointer;
-  transition: box-shadow 0.2s ease-in;
+#portfolio .content figure:hover figcaption {
+  opacity: 1;
 }
-#portfolio .card:hover {
-  box-shadow: 1px 5px 10px var(--card-boxshadow-color);
-}
-#portfolio .card .figure-container {
-  border-radius: 12px;
-}
-#portfolio .card img {
+#portfolio .content figure .figure-img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: inherit;
+  border-radius: 0.2rem;
 }
-#portfolio .card .card-body {
-  display: flex;
-  flex-direction: column;
-}
-#portfolio .card .card-body .card-title {
-  padding-inline: 10px;
-  font-weight: 600;
-  text-wrap: nowrap;
-}
-#portfolio .card .card-body .card-info {
-  text-align: justify;
-  padding-inline: 10px;
-  flex-basis: 50%;
-}
-#portfolio .card .card-body .sitebtn {
-  margin-block: 20px 20px;
-}
-#portfolio .card .card-body .sitebtn a {
-  background: var(--card-go-btn-background);
-  padding: 10px 30px;
-  border-radius: 0.5em;
-  text-decoration: none;
-  color: var(--card-go-btn-color);
-}
-#portfolio .card .card-body .sitebtn a:hover {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-}
-#portfolio #mycollapse {
-  height: 0;
+#portfolio .content figure figcaption {
+  text-align: center;
+  bottom: 0;
   opacity: 0;
-  visibility: hidden;
-  transition: height 200ms linear, opacity 200ms linear;
-}
-#portfolio .more-btn {
-  color: var(--cv-btn-color);
-  width: 200px;
-  height: 40px;
-  border-radius: 40px;
-  background: transparent;
-  position: relative;
-  overflow: hidden;
-  transition: box-shadow 200ms ease;
-}
-#portfolio .more-btn::before {
+  color: var(--figure-mask-color);
   position: absolute;
-  content: "";
-  width: 20%;
-  height: 150%;
-  background: linear-gradient(to right, var(--cv-btn-before-color-gray), var(--cv-btn-before-color-secondary), var(--cv-btn-before-color-gray));
-  left: -60px;
-  top: -10px;
-  transform: rotate(15deg);
-  transition: left 300ms ease-in;
-  box-shadow: 0px 4px 20px var(--cv-btn-before-color-gray);
+  transition: opacity 200ms linear;
 }
-#portfolio .more-btn:hover::before {
-  left: 230px;
+#portfolio .content .card-body-title {
+  color: var(--card-title-color);
+  transition: color 200ms linear;
 }
-#portfolio .more-btn:hover {
-  box-shadow: 3px 4px 6px var(--cv-btn-before-color-gray);
+#portfolio .content .git-btn {
+  color: var(--card-title-color);
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background: rgba(105, 105, 105, 0.5);
+  transition: color 200ms linear;
 }
-@media screen and (max-width: 990px) {
-  #portfolio .row .card {
-    width: 80%;
-    flex-direction: row;
-  }
-  #portfolio .row .card * {
-    flex-basis: 50%;
-  }
-  #portfolio .row .card .figure-container {
-    margin-bottom: 0;
-  }
-  #portfolio .row .card .card-title {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #portfolio .row .card .sitebtn {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-}
-@media screen and (max-width: 765px) {
-  #portfolio .row .card {
-    width: 100%;
-  }
-  #portfolio .row .card .card-body {
-    padding: 1px;
-  }
+#portfolio .content .git-btn:hover {
+  background: rgb(105, 105, 105);
 }/*# sourceMappingURL=portfolioSection.css.map */

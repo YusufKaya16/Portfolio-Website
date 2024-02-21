@@ -44,6 +44,7 @@
 
 <body>
 
+    <!-- navbar start -->
     <header>
         <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
             <div class="container-fluid" id="navbar">
@@ -73,11 +74,12 @@
             </div>
         </nav>
     </header>
+    <!-- navbar finish -->
 
-    <!-- Main Section -->
+    <!-- main section start -->
     <main>
 
-        <!-- Home Section -->
+        <!-- home section start -->
         <section class="container-fluid" id="home">
             <div class="container h-100 d-flex align-items-center justify-content-evenly" id="content">
                 <div class="circle-container d-flex justify-content-center align-items-center">
@@ -103,9 +105,10 @@
                 </article>
             </div>
         </section>
+        <!-- home section finish -->
 
-        <!-- About Section -->
-        <section class="container-fluid my-3" id="about">
+        <!-- about section start -->
+        <section class="container-fluid my-5" id="about">
 
             <div class="container d-flex flex-column align-items-center gap-5">
                 <article class="information">
@@ -122,35 +125,35 @@
                     </div>
                 </article>
 
-                <article class="skills w-100 pb-4 px-3">
+                <article class="skills w-100 pb-4">
                     <h1 class="about-title text-center mb-4 fw-bold">Beceriler</h1>
 
-                    <div class="row" id="skill-content">
-                        <div class="col-sm-8 offset-2">
+                    <div class="row mx-0 mx-sm-3" id="skill-content">
+                        <div class="col-sm-12 col-md-8 offset-0 offset-md-2">
                             <div class="row gy-3">
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">HTML</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">CSS</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">JavaScript</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">C</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">Bootstrap</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">SASS</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
                                     <span class="skill-tag">SQL</span>
                                 </div>
-                                <div class="col-sm-3 d-flex justify-content-center tagDiv">
-                                    <span class="skill-tag"></span>
+                                <div class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center tagDiv">
+                                    <span class="skill-tag">Yeni Beceri</span>
                                 </div>
                             </div>
                         </div>
@@ -158,186 +161,212 @@
                 </article>
             </div>
         </section>
+        <!-- about section finish -->
 
-        <!-- Portfolio Section -->
-        <section class="container-fluid p-0 mb-5" id="portfolio">
-
+        <!-- portfolio section start-->
+        <section class="container-fluid mb-5" id="portfolio">
             <div class="container">
                 <div class="title">
-                    <h1 class="portfolio-title text-center mb-2">Portföyüm</h1>
+                    <h1 class="portfolio-title text-center mb-3">Portföyüm</h1>
                 </div>
-            </div>
-
-            <div class="container d-flex flex-column align-items-center my-4" id="deneme">
-                <div class="row justify-content-center gap-2 mb-2" id="row-1">
-                    <div class="col-lg-3 px-0 d-flex justify-content-center">
-                        <div class="card p-2">
-                            <figure class="container p-0 figure-container">
-                                <img src="CSSFiles/images/navbar-3.png" class="img-fluid" alt="image-1">
+                <div class="row gy-3">
+                    <div class="col-sm-3">
+                        <div class="content p-2" id="content-1">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/navbar-3.png"" alt=" balloons">
+                                <figcaption>HTML ve CSS kullanarak yapılan Responsive tasarımlı Navigation Bar.
+                                </figcaption>
                             </figure>
-                            <div class="card-body p-0">
-                                <h3 class="card-title">Navigation Bar</h3>
-                                <p class="card-info m-0">
-                                    HTML ve CSS kullanarak yapılan Responsive tasarımlı Navigation Bar.
-                                </p>
-                                <div class="sitebtn text-end px-4">
-                                    <a href="https://navbar-responsive-js.netlify.app/" target="_blank">Git</a>
-                                </div>
+                            <h2 class="card-body-title text-center py-2 fs-3">Nagivation Bar</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn rounded-pill" href="https://navbar-responsive-js.netlify.app/"
+                                    target="_blank">Git</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-0 d-flex justify-content-center">
-                        <div class="card p-2">
-                            <figure class="container p-0 figure-container">
-                                <img src="CSSFiles/images/sidebar-2.png" class="img-fluid" alt="image-1">
+                    <div class="col-sm-3">
+                        <div class="content p-2" id="content-2">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/sidebar-2.png" alt="balloons">
+                                <figcaption>HTML, CSS ve JS kullanarak yapılan Responsive Tasarımlı Sidebar.
+                                </figcaption>
                             </figure>
-                            <div class="card-body p-0">
-                                <h3 class="card-title">Sidebar</h3>
-                                <p class="card-info m-0">
-                                    HTML, CSS ve JS kullanarak yapılan Responsive Tasarımlı Sidebar.
-                                </p>
-                                <div class="sitebtn text-end px-4">
-                                    <a href="https://sidebar-responsive-js.netlify.app/" target="_blank">Git</a>
-                                </div>
+                            <h2 class="card-body-title text-center py-2 fs-3">Sidebar</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn rounded-pill" href="https://sidebar-responsive-js.netlify.app/"
+                                    target="_blank">Git</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-0 d-flex justify-content-center">
-                        <div class="card p-2">
-                            <figure class="container p-0 figure-container">
-                                <img src="CSSFiles/images/profilCard.png" class="img-fluid" alt="image-1">
+                    <div class="col-sm-3">
+                        <div class="content p-2" id="content-3">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/calculator.png" alt="balloons">
+                                <figcaption>HTML, CSS ve JavaScript ile yapılan Hesap Makinesi
+                                </figcaption>
                             </figure>
-                            <div class="card-body p-0">
-                                <h3 class="card-title">Profile Card</h3>
-                                <p class="card-info m-0">
-                                    HTML ve CSS kullanarak yapılan Profil Kart
-                                </p>
-                                <div class="sitebtn text-end px-4">
-                                    <a href="https://profile-card-css-html.netlify.app/" target="_blank">Git</a>
-                                </div>
+                            <h2 class="card-body-title text-center py-2 fs-3">Profile Card</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn rounded-pill" href="https://my-calculator-jss.netlify.app/"
+                                    target="_blank">Git</a>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row justify-content-center gap-2" id="mycollapse">
-                    <div class="col-lg-3 px-0 d-flex justify-content-center">
-                        <div class="card p-2">
-                            <figure class="container p-0 figure-container">
-                                <img src="CSSFiles/images/loginForm.png" class="img-fluid" alt="image-1">
+                    <div class="col-sm-3">
+                        <div class="content p-2" id="content-4">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/loginForm.png" alt="balloons">
+                                <figcaption>HTML ve CSS kullanarak yapılan, glassmorphism background' a sahip Login Form
+                                </figcaption>
                             </figure>
-                            <div class="card-body p-0">
-                                <h3 class="card-title">Login Form</h3>
-                                <p class="card-info m-0">
-                                    HTML ve CSS kullanarak yapılan, glassmorphism background' a sahip Login Form.
-                                </p>
-                                <div class="sitebtn text-end px-4">
-                                    <a href="https://login-form-glassmorphism.netlify.app/" target="_blank">Git</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 px-0 d-flex justify-content-center">
-                        <div class="card p-2">
-                            <figure class="container p-0 figure-container">
-                                <img src="CSSFiles/images/digital-clock.png" class="img-fluid" alt="image-1">
-                            </figure>
-                            <div class="card-body p-0">
-                                <h3 class="card-title">Dijital Saat</h3>
-                                <p class="card-info m-0">
-                                    HTML, CSS ve JavaScript kullanarak yapmış olduğum bu proje, gerçek zamanlı saat
-                                    bilgisini göstermesinin yanı sıra, sayaç ve geri sayım özelliğide bulunmaktadır.
-                                </p>
-                                <div class="sitebtn text-end px-4">
-                                    <a href="https://js-my-digital-clock.netlify.app/" target="_blank">Git</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 px-0 d-flex justify-content-center">
-                        <div class="card p-2">
-                            <figure class="container p-0 figure-container">
-                                <img src="CSSFiles/images/pro6.png" class="img-fluid" alt="image-1">
-                            </figure>
-                            <div class="card-body p-0">
-                                <h3 class="card-title">Sık Sorulan Sorular</h3>
-                                <p class="card-info m-0">
-                                    HTML, CSS ve JavaSvript kullanarak gerçekleştirilen, sık sorulan sorular bölüm
-                                    örneği.
-                                </p>
-                                <div class="sitebtn text-end px-4">
-                                    <a href="https://faqsaccordion.netlify.app" target="_blank">Git</a>
-                                </div>
+                            <h2 class="card-body-title text-center py-2 fs-3">Login Form</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn rounded-pill" href="https://login-form-glassmorphism.netlify.app/"
+                                    target="_blank">Git</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="container text-center">
-                <button class="more-btn" id="collapseBtn">Daha Fazla</button>
             </div>
         </section>
+        <!-- portfolio section finish -->
+
     </main>
+    <!-- main section finish -->
 
-    <!-- <section class="newcontent">
-        Buraya ya da main içerisine
-        yeni içerik eklenmeli footer'in şimdilik yüzme sebebi.
-        Skills olarak bir content eklenebilir.
-    </section> -->
+    <!-- yenş ortfoy sayfasına ekelenecek -->
+    <!-- <div class="col-sm-3">
+                        <div class="content p-2">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/digital-clock.png"
+                                    alt="balloons">
+                                <figcaption>HTML, CSS ve JavaScript kullanarak yapmış olduğum bu proje, gerçek zamanlı
+                                    saat
+                                    bilgisini göstermesinin yanı sıra, sayaç ve geri sayım özelliğide bulunmaktadır.
+                                </figcaption>
+                            </figure>
+                            <h2 class="card-title text-center py-2 fs-3">Digital Clock</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn" href="https://js-my-digital-clock.netlify.app/" target="_blank">Git</a>
+                            </div>
 
-    <!-- footer section -->
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="content p-2">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/pro6.png" alt="balloons">
+                                <figcaption>HTML, CSS ve JavaSvript kullanarak gerçekleştirilen, sık sorulan sorular bölüm
+                                    örneği.
+                                </figcaption>
+                            </figure>
+                            <h2 class="card-title text-center py-2 fs-3">SSS</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn" href="https://fqa-accordion-frontend.netlify.app/" target="_blank">Git</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="content p-2">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/todo-list.png" alt="balloons">
+                                <figcaption>HTML, CSS ve JavaSvript kullanarak gerçekleştirilen, sık sorulan sorular bölüm
+                                    örneği.
+                                </figcaption>
+                            </figure>
+                            <h2 class="card-title text-center py-2 fs-3">To do List</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn" href="https://my-to-dolist-js.netlify.app/" target="_blank">Git</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="content p-2">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/youtube-clone.png" alt="balloons">
+                                <figcaption>HTML, Bootstrap ve JS kullanarak yaptığım Youtube Clone.
+                                </figcaption>
+                            </figure>
+                            <h2 class="card-title text-center py-2 fs-3">Youtube Clone</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn" href="https://my-youtubeclone-site.netlify.app/" target="_blank">Git</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="content p-2">
+                            <figure>
+                                <img class="figure-img img-fluid" src="CSSFiles/images/adviceAPI.png" alt="balloons">
+                                <figcaption>HTML, CSS ve JS kullanarak yaptığım Advice API.
+                                </figcaption>
+                            </figure>
+                            <h2 class="card-title text-center py-2 fs-3">Advice API</h2>
+                            <div class="text-end mt-2">
+                                <a class="git-btn" href="https://advice-card-js.netlify.app/" target="_blank">Git</a>
+                            </div>
+                        </div>
+                    </div> -->
+    <!-- yenin portfoy sonu -->
+
+
+    <!-- footer section start -->
     <footer class="container-fluid py-4 d-flex" id="contact">
-        <div class="container d-flex justify-content-center align-items-center">
-            <h1 class="text-light fs-2">Yusuf KAYA</h1>
-        </div>
-        <div class="container d-flex flex-column justify-content-center align-items-center gap-4 p-0 m-0">
-            <div class="sections">
-                <ul class="d-flex justify-content-center p-0">
-                    <li class="footer-list-item d-inline"><a
-                            class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
-                            href="#home">Ana Sayfa</a></li>
-                    <li class="footer-list-item d-inline"><a
-                            class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
-                            href="#about">Hakkımda</a></li>
-                    <li class="footer-list-item d-inline"><a
-                            class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
-                            href="#portfolio">Portfolio</a></li>
-                </ul>
+        <div class="container-fluid d-flex" id="footer-content">
+            <div class="container d-flex justify-content-center align-items-center">
+                <h1 class="text-light fs-2">Yusuf KAYA</h1>
             </div>
-            <div class="links">
-                <ul class="d-flex justify-content-center p-0">
-                    <li class="d-inline">
-                        <a class="text-decoration-none text-light text-uppercase px-4 py-3"
-                            href="https://www.instagram.com/yyusufkya/" target="_blank">
-                            <i class="fab fa-instagram fs-5"></i></a>
-                    </li>
-                    <li class="d-inline">
-                        <a class="text-decoration-none text-light text-uppercase px-4 py-3"
-                            href="https://www.linkedin.com/in/yusufkaya16/" target="_blank">
-                            <i class="fab fa-linkedin-in fs-5"></i></a>
-                    </li>
-                    <li class="d-inline">
-                        <a class="text-decoration-none text-light text-uppercase px-4 py-3"
-                            href="https://github.com/YusufKaya16" target="_blank">
-                            <i class="fab fa-github fs-5"></i></a>
-                    </li>
-                </ul>
+            <div class="container d-flex flex-column justify-content-center align-items-center gap-4 p-0 m-0">
+                <div class="sections">
+                    <ul class="d-flex justify-content-center p-0">
+                        <li class="footer-list-item d-inline"><a
+                                class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
+                                href="#home">Ana Sayfa</a></li>
+                        <li class="footer-list-item d-inline"><a
+                                class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
+                                href="#about">Hakkımda</a></li>
+                        <li class="footer-list-item d-inline"><a
+                                class="footer-link text-decoration-none text-uppercase px-4 py-3 rounded-pill"
+                                href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <ul class="d-flex justify-content-center p-0">
+                        <li class="d-inline">
+                            <a class="text-decoration-none text-light text-uppercase px-4 py-3"
+                                href="https://www.instagram.com/yyusufkya/" target="_blank">
+                                <i class="fab fa-instagram fs-5"></i></a>
+                        </li>
+                        <li class="d-inline">
+                            <a class="text-decoration-none text-light text-uppercase px-4 py-3"
+                                href="https://www.linkedin.com/in/yusufkaya16/" target="_blank">
+                                <i class="fab fa-linkedin-in fs-5"></i></a>
+                        </li>
+                        <li class="d-inline">
+                            <a class="text-decoration-none text-light text-uppercase px-4 py-3"
+                                href="https://github.com/YusufKaya16" target="_blank">
+                                <i class="fab fa-github fs-5"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="container d-flex justify-content-center align-items-center order-0">
-            <button class="contact-btn-style">İletişim</button>
+            <div class="container d-flex justify-content-center align-items-center order-0">
+                <button class="contact-btn-style">İletişim</button>
+            </div>
         </div>
     </footer>
+    <!-- footer section finish -->
+
+
     <!-- gsap cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- scrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- my script files -->
-    <script src="script.js"></script>
-    <script src="gsap.js"></script>
-    <script src="textanim.js"></script>
+    <script src="scriptFiles/script.js"></script>
+    <script src="scriptFiles/gsap.js"></script>
+    <script src="scriptFiles/textanim.js"></script>
 
 </body>
 

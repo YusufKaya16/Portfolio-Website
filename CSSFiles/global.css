@@ -91,11 +91,11 @@ body {
     --tag-card-bg: rgba(105, 105, 105, .5);
 
     /* portfolio colors */
-    --card-color: #fff;
-    --card-text-color: #000;
-    --card-go-btn-background: rgba(0, 0, 0, .3);
-    --card-go-btn-color: #000;
-    --card-boxshadow-color: rgba(0, 0, 0, 0.5);
+    --card-border-color: #000;
+    --card-title-color: #000;
+    --card-bg-color: #fff;
+    --figure-mask-color: #000;
+
 }
 
 .darkMode {
@@ -104,8 +104,6 @@ body {
     --navbar-link-color: #fff;
     --border-color: #fff;
     --slider-color: #000;
-
-
 
     /* home color change */
     --social-links-color: #fff;
@@ -125,14 +123,11 @@ body {
     --tag-card-shadow: rgba(255, 255, 255, .8);
     --tag-card-bg: rgba(71, 69, 69, 1);
 
-
-
     /* portfolio color change */
-    --card-color: #696969;
-    --card-text-color: #fff;
-    --card-go-btn-background: #292724;
-    --card-go-btn-color: #fff;
-    --card-boxshadow-color: rgba(255, 255, 255, 1);
+    --card-border-color: #fff;
+    --card-title-color: #fff;
+    --card-bg-color: rgba(71, 69, 69, 1);
+    --figure-mask-color: #fff;
 
 
 }

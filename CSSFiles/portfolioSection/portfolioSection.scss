@@ -2,150 +2,71 @@
 
 
 #portfolio {
-    position: relative;
 
-    .portfolio-title{
-        color: var(--card-text-color);
+    .portfolio-title {
+        color: var(--card-title-color);
+        transition: color 200ms linear;
     }
 
-    .card {
-        background: var(--card-color);
-        color: var(--card-text-color);
-        border-radius: 20px;
+    .content {
+        border-radius: .5rem;
         cursor: pointer;
-        transition: box-shadow .2s ease-in;
+        box-shadow: 0px 5px 10px gray;
+        max-width: 306px;
+        background: var(--card-bg-color);
 
-        &:hover {
-            box-shadow: 1px 5px 10px var(--card-boxshadow-color);
-        }
+        figure {
+            height: 200px;
+            position: relative;
 
-        .figure-container {
-            border-radius: calc(20px - 8px);
-        }
+            &:hover {
+                .figure-img {
+                    -webkit-mask-image: linear-gradient(to top, transparent 5%, var(--figure-mask-color) 100%);
+                    mask-image: linear-gradient(to top, transparent 5%, var(--figure-mask-color) 100%);
+                }
 
-        img {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: inherit;
-        }
-
-        .card-body {
-            display: flex;
-            flex-direction: column;
-
-            .card-title {
-                padding-inline: 10px;
-                font-weight: 600;
-                text-wrap: nowrap;
-            }
-
-            .card-info {
-                text-align: justify;
-                padding-inline: 10px;
-                flex-basis: 50%;
-            }
-
-            .sitebtn {
-                margin-block: 20px 20px;
-
-                a {
-                    background: var(--card-go-btn-background);
-                    padding: 10px 30px;
-                    border-radius: .5em;
-                    text-decoration: none;
-                    color: var(--card-go-btn-color);
-
-                    &:hover {
-                        background: rgba($color: #000000, $alpha: 0.8);
-                        color: #fff;
-                    }
+                figcaption {
+                    opacity: 1;
                 }
             }
-        }
-    }
 
-    #mycollapse {
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: height 200ms linear, opacity 200ms linear;
-    }
-
-    .more-btn {
-        color: var(--cv-btn-color);
-        width: 200px;
-        height: 40px;
-        border-radius: 40px;
-        background: transparent;
-        position: relative;
-        overflow: hidden;
-        transition: box-shadow 200ms ease;
-
-        &::before {
-            position: absolute;
-            content: '';
-            width: 20%;
-            height: 150%;
-            background: linear-gradient(to right, var(--cv-btn-before-color-gray), var(--cv-btn-before-color-secondary), var(--cv-btn-before-color-gray));
-            left: -60px;
-            top: -10px;
-            transform: rotate(15deg);
-            transition: left 300ms ease-in;
-            box-shadow: 0px 4px 20px var(--cv-btn-before-color-gray);
-        }
-
-        &:hover::before {
-            left: 230px;
-        }
-
-        &:hover {
-            box-shadow: 3px 4px 6px var(--cv-btn-before-color-gray);
-        }
-
-    }
-
-    @media screen and (max-width: 990px) {
-
-        .row {
-            .card {
-                width: 80%;
-                flex-direction: row;
-
-                * {
-                    flex-basis: 50%;
-                }
-
-                .figure-container {
-                    margin-bottom: 0;
-                }
-
-                .card-title {
-                    margin: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .sitebtn {
-                    margin: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: 765px) {
-        .row {
-            .card {
+            .figure-img {
                 width: 100%;
-
-                .card-body {
-                    padding: 1px;
-                }
+                height: 100%;
+                object-fit: cover;
+                border-radius: .2rem;
             }
+
+            figcaption {
+                text-align: center;
+                bottom: 0;
+                opacity: 0;
+                color: var(--figure-mask-color);
+                position: absolute;
+                transition: opacity 200ms linear;
+            }
+
+        }
+
+        .card-body-title{
+            color: var(--card-title-color);
+            transition: color 200ms linear;
+        }
+
+        .git-btn {
+            color: var(--card-title-color);
+            width: 120px;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            background: rgba(105, 105, 105, .5);
+            transition: color 200ms linear;
+
+            &:hover {
+                background: rgba(105, 105, 105, 1);
+            }
+
         }
     }
 }
